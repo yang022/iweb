@@ -1,0 +1,6 @@
+1、面试题：大型页面CSS的章法？
+   一个大型的页面（例如：京东首页）CSSD大约有1000行，
+ 编写时有一定的章法：
+   ①CSS Reset:样式重置，把HTML标签的默认样式统一化——可以使用Normalize.css(标准化)
+   ②Scaffolding:样式脚手架，设计全局的基础样式
+   ③Layout System:布局系统，进行页面布局必需的Class
