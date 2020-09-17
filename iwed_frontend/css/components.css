@@ -52,7 +52,7 @@
 	font-size: 1.7em;
 	position: absolute;
 }
-.mycart{
+.my-cart{
 	position: absolute;
 	right: 0;
 	top: 50%;
@@ -63,11 +63,45 @@
 	line-height: 32px;
 	padding: 0 0.5em;
 }
+.my-cart > .fa{
+	color: #00BE56;
+	padding: 0 0.5em;
+}
 /*3、 导航条 */
 .navbar{
 	background: #00be56;
-	border-bottom: 1px solid #b3efc0;
+	border-bottom: 3px solid #b3efc0;
 	height: 52px;
+	font-size: 1.15em;
+}
+.menu:after{
+	content: '';
+	display: table;
+}
+.menu > li{
+	float: left;
+	line-height: 49px;
+	padding: 0 1.5em;
+}
+.menu > li:hover{
+	background: #00b149;
+}
+.menu > li.active{
+	background: #00a43e;
+}
+.menu > li > a{
+	color: #fff;
+}
+.user-center{
+	background: #55c760;
+	line-height: 49px;
+}
+.user-center a,
+.user-center span{
+	color: #fff;
+}
+.user-center a:hover{
+	color: #ffff9b;
 }
 .carouselbar{
 	border-bottom: 4px solid #ddd;
