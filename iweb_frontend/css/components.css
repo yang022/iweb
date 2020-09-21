@@ -193,12 +193,10 @@
 .mainbar  .course{
 	padding: 1.2em  0;/*每个列中的.course需要自己提供上下间距*/
 }
-.mainbar .course  .pic  img,
-.mainbar .teachers  .pic  img{
+.mainbar .course  .pic  img{
 	width: 100%;
 }
-.mainbar .course .title,
-.mainbar .teachers .title{
+.mainbar .course .title{
 	display: block;   /*让课程标题占一行*/
 	text-align: left;
 	line-height: 1.8em;
@@ -216,11 +214,94 @@
 	font-weight: bold;
 	text-align: left;
 }
+/* 在PAD屏幕下，讲师列表一行只能显示3.5个讲师信息，溢出内容水平滚动 */
+@media screen and (min-width:768px) and (max-width:1023px){
+	.teacher-list{
+		white-space: nowrap; /*一行结尾处的空白处不换行*/
+		overflow-x: auto;/*水平方向内容溢出时滚动条显示*/
+		margin-left: 0;/*取消.row左边的margin*/
+		margin-right: 0;/*取消.row右边的margin*/
+	}
+	.col-lg-5-1 {
+		/*取消列浮动——浮动元素只要控件不够必然转到下一行*/
+		float: none;
+		/*根据PAD屏幕下的.container宽度(750px)设置内容宽*/
+		width: 214px;
+		/*将列设置为“行内块*——j就可以在一行出现多个列*/
+		display: inline-block;
+	}
+}
+/* 在PHONE屏幕下，讲师列表一行只能显示2.5个讲师信息，溢出内容水平滚动 */
+@media screen and (max-width:767px){
+	.teacher-list{
+		white-space: nowrap; /*一行结尾处的空白处不换行*/
+		overflow-x: auto;/*水平方向内容溢出时滚动条显示*/
+		margin-left: 0;/*取消.row左边的margin*/
+		margin-right: 0;/*取消.row右边的margin*/
+	}
+	.col-lg-5-1 {
+		/*取消列浮动——浮动元素只要控件不够必然转到下一行*/
+		float: none;
+		/*根据PAD屏幕下的.container宽度(100%,基本都在320px到375之间)设置内容宽*/
+		width: 140px;
+		/*将列设置为“行内块*——j就可以在一行出现多个列*/
+		display: inline-block;
+	}
+}
 /* 底部条 */
+.mainbar .teacher-item{
+	padding: 2em 0;
+}
+.mainbar .teacher-item .pic img{
+	width: 100%;
+}
+.mainbar .teacher-item .tname{
+     font-size: 1.2em;
+	 color: #555;
+	 line-height: 2.2em;
+	 display: block;   /*显示为块级元素，独占一行*/
+	 text-align: center;
+}
+.mainbar .teacher-item .maincourse{
+	font-size: .8em;
+	color: #999;
+	display: block;
+	text-align: center;
+}
+/* 功能菜单 */
 .bottombar {
 	background: #eee;
 }
 /* 选择“底部条”中的“容器”下的第一个，row元素 */
 .bottombar > .container > .row:first-child {
 	border-bottom: 1px solid #ddd;
+}
+.bottombar .fn-menu-header{
+	margin-bottom: 5px;
+	color: #555;
+}
+.bottombar .fn-menu{
+	color: #666;
+	line-height: 1.7em;
+}
+.bottombar .contact{
+	margin-top: 40px;
+}
+.bottombar .contact .fa-fax{
+	color: #00BE56;
+	font-size: 4em;
+	float: left;
+}
+.bottombar .contact .hotline{
+	margin-left: 4em;
+	font-size: 1.4em;
+	line-height: 1.6em;
+}
+.bottombar .copyright{
+	text-align: center;
+	color: #999;
+	font-size: .8em;
+	line-height: 2em;
+	margin: 1em 0 1.3em;
+	
 }

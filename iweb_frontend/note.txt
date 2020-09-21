@@ -1,9 +1,14 @@
-一：浮动布局坑
-   假设 .parent>.child1+.child2+.child3
-   .parent宽度可以容纳.child1和.child3,如果三个子元素都浮动
-的话，.child3会被挤到下一行
-	情形0：.child1和child2一样高,则.child3跑到child1下面
-	情形1：.child1比child2高,则.child3跑到child2下面
-	情形2：.child1比child2一样矮,则.child3跑到child2下面
-	情形3：.child1和child2一样矮,则.child3跑到child1下面
-但顶部
+一、为页面添加响应式/自适应功能
+   ①最新课程/最新课程
+   PC：一行四列
+   PAD:一行两列
+   PHONE：一行三列
+   
+   二、CSS复习：如何实现滚动效果
+   .box{
+	   /*在一行结尾不换行(机是一行放不下)*/
+	   white-space:nowrap;
+	   /*水平方向溢出时，显示滚动条/无溢出时不显示*/
+	   overflow-x:auto;
+   }
+   
