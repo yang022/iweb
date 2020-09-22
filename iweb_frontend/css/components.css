@@ -39,7 +39,7 @@
 	padding: 0 0.6em;
 	font-size: 1.15em;
 	border: 1px solid #ccc;
-	/* margin-right: 50px;   /*让出右侧的搜索按钮的空间*/ */
+	/* margin-right: 50px;   /*让出右侧的搜索按钮的空间*/ 
 }
 .search-button {
 	width: 50px;
@@ -50,6 +50,8 @@
 	border: none;
 	font-size: 1.7em;
 	position: absolute;
+	right: 0;
+	top: 0;
 }
 .my-cart {
 	position: absolute;
@@ -66,6 +68,50 @@
 	color: #00be56;
 	padding: 0 0.5em;
 }
+/*PHONE屏幕下的搜索条：LOCO+Secarch+Hamburger*/
+@media screen and (max-width:767px) {
+	.searchbar{
+		background: #00be56;
+		border-bottom: 3px solid #b3efc0;
+		height: 52px;
+		font-size: 1.15em;
+	}
+	.logo-container{
+		height: 52px;/*容器的高大于内容的高才可能有竖直居中问题*/
+	    display: flex;  /*图片的容器显示模式变为：弹性盒子*/
+		align-items: center; /*弹性盒子中的子元素居中对齐*/
+	}
+	.logo_reverse{
+		/* flex:1; */
+		width:100%;  /*正常情况下，控制弹性盒子中子元素尺寸应该使用"弹性占比(flex)"即可——
+		此方法只会拉伸图片的宽，而不会改变高，所以此处没有使用*/
+    }
+	.search {
+		 position: relative;  /*相对定位——为放大镜提供定位参照物*/
+		 margin-top: 10px;  /*为输入框竖直居中增加上间距*/
+		 top:0;  /*清除全局样式中定位相关修改*/
+		 right: 0;/*清除全局样式中定位相关修改*/
+	}
+	.search-input {
+		width: 100%;
+		padding:0 3em 0  0.6em;
+		margin-right: 0;   /*让出右侧的搜索按钮的空间*/
+	}
+	.search-button {
+		background: transparent;  /*透明色 #fff也可以*/
+		color: #00be56 ;
+		top: -2px;
+	}
+	.hamburger{
+		color: #fff;
+		line-height: 52px;
+		font-size: 26px;
+	}
+	.navbar{
+		display: none;
+	}
+}
+
 /* 3、导航条 */
 .navbar{
 	background: #00be56;
@@ -303,5 +349,4 @@
 	font-size: .8em;
 	line-height: 2em;
 	margin: 1em 0 1.3em;
-	
 }

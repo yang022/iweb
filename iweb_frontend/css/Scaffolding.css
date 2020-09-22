@@ -36,6 +36,21 @@ li{
 .hidden {
 	display: none;
 }
+@media screen and (min-width:1024px) {
+	.hidden-lg {
+		display: none;   /*仅在PC屏幕下隐藏*/
+	}
+}
+@media screen and (min-width:768px) and (max-width:1023px){
+	.hidden-md {
+		display: none;   /*仅在PAD屏幕下隐藏*/
+	}
+}
+@media screen and (max-width:767px) {
+	.hidden-sm {
+		display: none;   /*仅在PHONE屏幕下隐藏*/
+	}
+}
 .text-center {
 	text-align: center;
 }
