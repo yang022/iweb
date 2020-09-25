@@ -59,5 +59,48 @@ document.querySelector('[data-carousel="prev"]').onclick=function(){
 	list=document.querySelectorAll('.carousel>.indicators>li')
 	list[currentCarousel].classList.add('active') 
 }
+//当点击轮播指示器（四个小圆）饼时，切换到对应的广告项
+let indicatorList = document.querySelectorAll('[data-carouser-to]')
+//console.log(indicatorList) //类数组对象
+//循环遍历数组中的每个元素
+indicatorList.forEach(function(e, i){
+	// colsole.log(i, e)   //e就是每个li，i就是li下标
+	e.onclick=function(){
+	   //切换要显示广告项
+	   document.querySelector('.carousel>.items>li.active')
+.classList.remove('active')
+    //提示:CSS中nth-child()从1开始而不是0!!!
+	 document.querySelector('.carousel>.items>li:nth-child(' + (i+1) + ')')
+.classList.add('active')
+	   //切换轮播指示器的active
+	 document.querySelector('.carousel>.indicators>li.active')
+.classList.remove('active')
+	       //提示:CSS中nth-child()从1开始而不是0!!!
+	document.querySelector('.carousel>.indicators>li:nth-child(' + (i+1) + ')')
+.classList.add('active')	   
+	}
+})
 
-
+//让轮播广告每隔3秒自动切换下一张
+//一次性定时器
+// let timer = setTimeout()   
+//周期性定时器
+let timer = setInterval(function(){
+	currentCarousel++
+	if(currentCarousel>=totalCarousel){
+		//如过切换到最后一张之后，则轮播广告从头开始轮播
+		currentCarousel=0
+	} 
+	//切换当前显示广告项
+	document.querySelector('.carousel>.items>li.active')
+.classList.remove('active')
+	//提示:CSS中nth-child()从1开始而不是0!!!
+	document.querySelector('.carousel>.items>li:nth-child(' + (currentCarousel+1) + ')')
+.classList.add('active')
+	//切换当前广告对应指示器
+	document.querySelector('.carousel>.indicators>li.active')
+.classList.remove('active')
+		 //提示:CSS中nth-child()从1开始而不是0!!!
+	document.querySelector('.carousel>.indicators>li:nth-child(' + (currentCarousel+1) + ')')
+.classList.add('active')	
+},2000)
