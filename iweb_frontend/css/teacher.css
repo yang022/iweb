@@ -1,10 +1,4 @@
-.content{
-	line-height: 32px;
-	color: #999;
-	margin-left: 185px;
+.title{
+	padding: 1.8em;
+	border-bottom: 1px dotted #ccc;/*远点下边框*/
 }
-.cot{
-	width: 1000px;
-	margin: 0 auto;
-}
-
