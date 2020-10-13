@@ -1,0 +1,29 @@
+{
+  "name": "iweb_backend",
+  "version": "2.0.1",
+  "description": "iWeb project backend data API subsystem",
+  "main": "main.js",
+  "scripts": {
+    "test": "node  ./test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yang022/iweb.git"
+  },
+  "keywords": [
+    "iweb",
+    "backend",
+    "api",
+    "yang022"
+  ],
+  "author": "YangLiu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yang022/iweb/issues"
+  },
+  "homepage": "https://github.com/yang022/iweb#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
+  }
+}

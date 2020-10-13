@@ -1,0 +1,18 @@
+二、使用Node.js创建服务器端项目步骤
+  ①在服务器上安装Node.js解释器，确保在命令行中可以运行
+      node   -v
+  ②创建项目必需文件夹，例如iweb_backend,进入此文件夹，创建
+Node.js项目必需的猫叔文件：package.json
+   可以手工创建该文件，并用记事本编辑
+   也可以使用简化工具来创建此文件：npm  init
+  ③
+   
+NPM与Node的关系：
+Node.js的扩展模块有很多，为了简便开发者的查找和使用，有人
+专门创建了一个Node.js的扩展模块仓库(npmjs.com),并提供了
+一个命令下载管理工具:Node Package Manger,简称npm后来的
+版本Node.js安装包中，已经默认把npm安装在一起，作为扩展模块
+维护工具
+
+小知识：可以使用npm i xxxx自动从npmjs.com仓库中下载指定的
+第三方模块，也可以使用npm i  自动获取package.json
